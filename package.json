@@ -1,0 +1,20 @@
+{
+  "name": "bunyan-duckling",
+  "version": "1.0.0",
+  "description": "Maps the major Bunyan logging methods to console.log/error",
+  "homepage": "http://github.com/bloglovin/node-bunyan-duckling",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bloglovin/node-bunyan-duckling"
+  },
+  "author": {
+    "name": "Pelle Wessman",
+    "email": "pelle@kodfabrik.se",
+    "url": "http://kodfabrik.se/"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "main": "./index.js"
+}
