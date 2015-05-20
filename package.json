@@ -1,11 +1,11 @@
 {
-  "name": "bunyan-duckling",
+  "name": "bunyan-adaptor",
   "version": "1.0.0",
-  "description": "Maps the major Bunyan logging methods to console.log/error",
-  "homepage": "http://github.com/bloglovin/node-bunyan-duckling",
+  "description": "Maps the major Bunyan logging methods to custom methods",
+  "homepage": "http://github.com/bloglovin/node-bunyan-adaptor",
   "repository": {
     "type": "git",
-    "url": "git://github.com/bloglovin/node-bunyan-duckling"
+    "url": "git://github.com/bloglovin/node-bunyan-adaptor"
   },
   "author": {
     "name": "Pelle Wessman",
