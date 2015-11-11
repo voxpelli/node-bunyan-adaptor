@@ -5,6 +5,9 @@
 module.exports = function (options) {
   var logger = {};
 
+  options = options || {};
+  options.log = options.log || console.log.bind(console);
+
   ['trace', 'debug'].forEach(function (value) {
     logger[value] = options[value] || options.verbose || options.log;
   });

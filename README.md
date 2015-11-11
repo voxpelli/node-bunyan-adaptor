@@ -36,3 +36,5 @@ Maps `options` methods to all seven [Bunyan log levels](https://github.com/trent
 * `.info()` – maps to `options.info` and fallbacks to `options.log`
 * `.debug()` – maps to `options.debug` and fallbacks to `options.verbose` and `options.log` in that order
 * `.trace()` – maps to `options.trace` and fallbacks to `options.verbose` and `options.log` in that order
+
+`options.log` itself fallbacks to `console.log()`
