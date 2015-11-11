@@ -1,6 +1,6 @@
 {
   "name": "bunyan-adaptor",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Maps the major Bunyan logging methods to custom methods",
   "homepage": "http://github.com/bloglovin/node-bunyan-adaptor",
   "repository": {
