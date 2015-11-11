@@ -5,7 +5,11 @@
 module.exports = function (options) {
   var logger = {};
 
-  ['trace', 'debug', 'info', 'warn'].forEach(function (value) {
+  ['trace', 'debug'].forEach(function (value) {
+    logger[value] = options[value] || options.verbose || options.log;
+  });
+
+  ['info', 'warn'].forEach(function (value) {
     logger[value] = options[value] || options.log;
   });
 
