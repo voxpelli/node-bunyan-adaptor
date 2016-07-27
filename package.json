@@ -2,10 +2,10 @@
   "name": "bunyan-adaptor",
   "version": "1.1.0",
   "description": "Maps the major Bunyan logging methods to custom methods",
-  "homepage": "http://github.com/bloglovin/node-bunyan-adaptor",
+  "homepage": "http://github.com/voxpelli/node-bunyan-adaptor",
   "repository": {
     "type": "git",
-    "url": "git://github.com/bloglovin/node-bunyan-adaptor"
+    "url": "git://github.com/voxpelli/node-bunyan-adaptor"
   },
   "author": {
     "name": "Pelle Wessman",
