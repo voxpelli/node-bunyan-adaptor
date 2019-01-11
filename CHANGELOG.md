@@ -1,3 +1,14 @@
+## 3.0.0 (2019-01-11)
+
+* *Breaking*: Require at least Node 8
+
+## 2.0.0 (2019-01-11)
+
+* *Breaking*: Require at least Node 4
+* *Feature*: Added support for `.child()`
+* *Stability*: Added tests and linting
+* *Stability*: Added JSDoc comments and TypeScript linting using those comments
+
 ## 1.1.0 (2015-11-11)
 
 
