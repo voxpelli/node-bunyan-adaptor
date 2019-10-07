@@ -1,6 +1,6 @@
 # Bunyan Adaptor
 
-Maps the major [Bunyan](https://github.com/trentm/node-bunyan) logging methods to custom methods. Useful for fitting your own logging system with a module expecting a Bunyan interface. For a simple `console.log()`/`.error()` mapping see [Bunyan Duckling](https://github.com/bloglovin/node-bunyan-duckling)
+Maps the major [Bunyan](https://github.com/trentm/node-bunyan) logging methods to custom methods. Useful for fitting your own logging system with a module expecting a Bunyan interface. For a simple `console.log()`/`.error()` mapping see [Bunyan Duckling](https://github.com/voxpelli/node-bunyan-duckling)
 
 Also usable with Bunyan-compatible loggers like [Pino](https://github.com/pinojs/pino).
 
