@@ -25,7 +25,13 @@
     "declaration:check": "git diff --exit-code -- index.d.ts",
     "declaration": "run-s declaration:*",
     "test:mocha": "NODE_ENV=test nyc --reporter=lcov --reporter text mocha test/*.spec.js",
-    "test": "run-s declaration check test:*"
+    "test": "run-s check test:*",
+    "prepublishOnly": "run-s declaration test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run --silent prepublishOnly"
+    }
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
