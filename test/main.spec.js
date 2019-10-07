@@ -1,9 +1,13 @@
+// @ts-check
+/// <reference types="node" />
 /// <reference types="mocha" />
 /// <reference types="chai" />
 /// <reference types="sinon" />
 /// <reference types="sinon-chai" />
 
 'use strict';
+
+/** @typedef {import('..').BunyanLogMethod} BunyanLogMethod */
 
 var chai = require('chai');
 var sinon = require('sinon');
@@ -14,8 +18,9 @@ chai.use(sinonChai);
 var should = chai.should();
 
 describe('Bunyan Adaptor', function () {
-  var bunyanAdaptor = require('../');
+  var bunyanAdaptor = require('..');
 
+  /** @type {BunyanLogMethod} */
   var stubbedLog;
 
   beforeEach(function () {
