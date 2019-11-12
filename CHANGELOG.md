@@ -1,4 +1,4 @@
-## 3.0.1 (2019-MM-DD)
+## 3.0.1 (2019-11-12)
 
 * *Feature*: TypeScript definition generated from JSDoc comments (thanks to [TypeScript 3.7.0](https://github.com/microsoft/TypeScript/pull/32372))
 * *Tweak*: Enforced stricter TypeScript tests
