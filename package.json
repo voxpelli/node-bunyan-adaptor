@@ -23,7 +23,7 @@
     "declaration:build": "rm -f index.d.ts && tsc -p declaration.tsconfig.json",
     "declaration:check": "git diff --exit-code -- index.d.ts",
     "full-test": "run-s declaration:* test",
-    "test:mocha": "NODE_ENV=test nyc --reporter=lcov --reporter text mocha test/*.spec.js",
+    "test:mocha": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter text mocha test/*.spec.js",
     "test": "run-p check:* && run-s test:*",
     "prepublishOnly": "npm run --silent full-test"
   },
@@ -39,6 +39,7 @@
     "@types/sinon": "^7.0.3",
     "@types/sinon-chai": "^3.2.2",
     "chai": "^4.2.0",
+    "cross-env": "^6.0.3",
     "eslint": "^6.6.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.14.0",
