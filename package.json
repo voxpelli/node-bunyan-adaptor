@@ -25,7 +25,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run --silent full-test"
+      "pre-push": "npm run --silent test"
     }
   },
   "devDependencies": {
