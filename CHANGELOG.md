@@ -1,3 +1,7 @@
+## 3.0.2 (2019-11-18)
+
+* *Revert*: TypeScript definition not compatible with any release before [TypeScript 3.7.0](https://github.com/microsoft/TypeScript/pull/32372), which made it a breaking change
+
 ## 3.0.1 (2019-11-12)
 
 * *Feature*: TypeScript definition generated from JSDoc comments (thanks to [TypeScript 3.7.0](https://github.com/microsoft/TypeScript/pull/32372))
