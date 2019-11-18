@@ -1,3 +1,7 @@
+## 4.0.0 (2019-11-18)
+
+* *Feature*: Restore included types that required TypeScript 3.7.0](https://github.com/microsoft/TypeScript/pull/32372)
+
 ## 3.0.2 (2019-11-18)
 
 * *Revert*: TypeScript definition not compatible with any release before [TypeScript 3.7.0](https://github.com/microsoft/TypeScript/pull/32372), which made it a breaking change

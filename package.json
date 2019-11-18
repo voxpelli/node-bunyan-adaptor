@@ -20,12 +20,16 @@
   "scripts": {
     "check:eslint": "eslint --ext .js --ext .jsx .",
     "check:tsc": "tsc",
+    "declaration:build": "rm -f index.d.ts && tsc -p declaration.tsconfig.json",
+    "declaration:check": "git diff --exit-code -- index.d.ts",
+    "full-test": "run-s declaration:* test",
     "test:mocha": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter text mocha test/*.spec.js",
-    "test": "run-p check:* && run-s test:*"
+    "test": "run-p check:* && run-s test:*",
+    "prepublishOnly": "npm run --silent full-test"
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run --silent test"
+      "pre-push": "npm run --silent full-test"
     }
   },
   "devDependencies": {
