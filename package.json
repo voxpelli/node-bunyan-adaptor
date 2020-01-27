@@ -17,6 +17,7 @@
     "node": ">=8.0.0"
   },
   "main": "./index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "check:eslint": "eslint --ext .js --ext .jsx .",
     "check:tsc": "tsc",
