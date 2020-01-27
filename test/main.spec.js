@@ -9,19 +9,19 @@
 
 /** @typedef {import('..').BunyanLogMethod} BunyanLogMethod */
 
-var chai = require('chai');
-var sinon = require('sinon');
-var sinonChai = require('sinon-chai');
+const chai = require('chai');
+const sinon = require('sinon');
+const sinonChai = require('sinon-chai');
 
 chai.use(sinonChai);
 
-var should = chai.should();
+const should = chai.should();
 
 describe('Bunyan Adaptor', function () {
-  var bunyanAdaptor = require('..');
+  const bunyanAdaptor = require('..');
 
   /** @type {BunyanLogMethod} */
-  var stubbedLog;
+  let stubbedLog;
 
   beforeEach(function () {
     stubbedLog = sinon.stub(console, 'log');
@@ -33,7 +33,7 @@ describe('Bunyan Adaptor', function () {
 
   describe('main', function () {
     it('should be created and log correctly', function () {
-      var logger = bunyanAdaptor();
+      const logger = bunyanAdaptor();
 
       should.exist(logger);
       should.exist(logger.error);
@@ -44,8 +44,8 @@ describe('Bunyan Adaptor', function () {
     });
 
     it('should support child loggers', function () {
-      var logger = bunyanAdaptor();
-      var child = logger.child({ key: 'value' });
+      const logger = bunyanAdaptor();
+      const child = logger.child({ key: 'value' });
 
       should.exist(child);
       should.exist(child.error);
@@ -61,9 +61,9 @@ describe('Bunyan Adaptor', function () {
     });
 
     it('should support custom logger', function () {
-      var stubbedCustomLog = sinon.stub();
+      const stubbedCustomLog = sinon.stub();
 
-      var logger = bunyanAdaptor({
+      const logger = bunyanAdaptor({
         log: stubbedCustomLog
       });
 
@@ -77,12 +77,12 @@ describe('Bunyan Adaptor', function () {
     });
 
     it('should support detailed custom loggers', function () {
-      var stubbedCustomLog = sinon.stub();
-      var stubbedCustomVerboseLog = sinon.stub();
-      var stubbedCustomWarnLog = sinon.stub();
-      var stubbedCustomErrorLog = sinon.stub();
+      const stubbedCustomLog = sinon.stub();
+      const stubbedCustomVerboseLog = sinon.stub();
+      const stubbedCustomWarnLog = sinon.stub();
+      const stubbedCustomErrorLog = sinon.stub();
 
-      var logger = bunyanAdaptor({
+      const logger = bunyanAdaptor({
         log: stubbedCustomLog,
         verbose: stubbedCustomVerboseLog,
         warn: stubbedCustomWarnLog,
@@ -106,11 +106,11 @@ describe('Bunyan Adaptor', function () {
     });
 
     it('should have child loggers inherit custom loggers', function () {
-      var stubbedCustomLog = sinon.stub();
-      var logger = bunyanAdaptor({
+      const stubbedCustomLog = sinon.stub();
+      const logger = bunyanAdaptor({
         log: stubbedCustomLog
       });
-      var child = logger.child({ key: 'value' });
+      const child = logger.child({ key: 'value' });
 
       should.exist(child);
       should.exist(child.error);
@@ -127,12 +127,12 @@ describe('Bunyan Adaptor', function () {
     });
 
     it('should support custom child method', function () {
-      var stubbedCustomChild = sinon.stub().returns('yay');
+      const stubbedCustomChild = sinon.stub().returns('yay');
 
-      var logger = bunyanAdaptor({
+      const logger = bunyanAdaptor({
         child: stubbedCustomChild
       });
-      var child = logger.child({ key: 'value' });
+      const child = logger.child({ key: 'value' });
 
       should.exist(child);
 
