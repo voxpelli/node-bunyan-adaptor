@@ -1,6 +1,7 @@
 ## 4.0.1 (2020-01-27)
 
 * *Fix*: Properly pointed out the [types in the package.json](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package) file
+* *Fix*: Corrected the JSDoc declaration of the main options
 
 ## 4.0.0 (2019-11-18)
 

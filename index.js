@@ -18,15 +18,15 @@
 
 /**
  * @typedef BunyanAdaptorOptions
- * @property {BunyanLogMethod} [options.log] Defaults to `console.log()`
- * @property {BunyanLogMethod} [options.verbose] Defaults to `options.log`
- * @property {BunyanLogMethod} [options.trace] Defaults to `options.verbose`, fallbacks to `options.log`
- * @property {BunyanLogMethod} [options.debug] Defaults to `options.verbose`, fallbacks to `options.log`
- * @property {BunyanLogMethod} [options.info] Defaults to `options.log`
- * @property {BunyanLogMethod} [options.warn] Defaults to `options.log`
- * @property {BunyanLogMethod} [options.error] Defaults to `options.log`
- * @property {BunyanLogMethod} [options.fatal] Defaults to `options.error`, fallbacks to `options.log`
- * @property {BunyanChildMethod} [options.child] Defaults to a standard simple child method
+ * @property {BunyanLogMethod} [log] Defaults to `console.log()`
+ * @property {BunyanLogMethod} [verbose] Defaults to `options.log`
+ * @property {BunyanLogMethod} [trace] Defaults to `options.verbose`, fallbacks to `options.log`
+ * @property {BunyanLogMethod} [debug] Defaults to `options.verbose`, fallbacks to `options.log`
+ * @property {BunyanLogMethod} [info] Defaults to `options.log`
+ * @property {BunyanLogMethod} [warn] Defaults to `options.log`
+ * @property {BunyanLogMethod} [error] Defaults to `options.log`
+ * @property {BunyanLogMethod} [fatal] Defaults to `options.error`, fallbacks to `options.log`
+ * @property {BunyanChildMethod} [child] Defaults to a standard simple child method
  */
 
 /**
