@@ -3,7 +3,8 @@
     "index.js"
   ],
   "include": [
-    "test/**/*.js"
+    "test/**/*.js",
+    "test/**/*.ts"
   ],
   "compilerOptions": {
     /* Basic Options */
@@ -12,6 +13,7 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "noEmit": true,
+    "maxNodeModuleJsDepth": 3,
 
     /* Strict Type-Checking Options */
     "strict": true,
