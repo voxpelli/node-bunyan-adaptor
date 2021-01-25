@@ -23,6 +23,7 @@
     "check:installed-check": "installed-check -i eslint",
     "check:eslint": "eslint .",
     "check:tsc": "tsc",
+    "check:type-coverage": "type-coverage --detail --strict --at-least 99 --ignore-files 'test/*'",
     "check": "run-p check:*",
     "declaration:build": "rm -f index.d.ts && tsc -p declaration.tsconfig.json",
     "declaration:check": "git diff --exit-code -- index.d.ts",
@@ -68,6 +69,7 @@
     "pino": "^6.3.0",
     "sinon": "^9.0.0",
     "sinon-chai": "^3.5.0",
+    "type-coverage": "^2.14.9",
     "typescript": "^4.1.3"
   }
 }
