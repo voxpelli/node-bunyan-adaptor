@@ -1,3 +1,9 @@
+## 5.0.0 (2021-01-24)
+
+* **BREAKING:** Require at least Node 12
+* *Improvement:* Generates source maps for types
+* *Improvement:* Ships with an ESM module besides the CommonJS one, thanks to [linemod](https://github.com/voxpelli/linemod/)
+
 ## 4.0.1 (2020-01-27)
 
 * *Fix*: Properly pointed out the [types in the package.json](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package) file
@@ -5,7 +11,7 @@
 
 ## 4.0.0 (2019-11-18)
 
-* *Feature*: Restore included types that required TypeScript 3.7.0](https://github.com/microsoft/TypeScript/pull/32372)
+* *Feature*: Restore included types that required [TypeScript 3.7.0](https://github.com/microsoft/TypeScript/pull/32372)
 
 ## 3.0.2 (2019-11-18)
 

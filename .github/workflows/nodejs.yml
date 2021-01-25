@@ -1,23 +1,24 @@
 name: Node CI
 
-on: [push]
+on:
+  - push
+  - pull_request
 
 jobs:
   test:
-    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    name: Node ${{ matrix.node_version }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
-        node_version: [8, 10, 12]
+        node_version: [12, 14, 15]
         os: [ubuntu-latest, windows-latest]
 
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node_version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
-        version: ${{ matrix.node_version }}
-    - name: npm install
-      run: npm install
-    - name: Mocha tests
-      run: npm run test:mocha
+        node-version: ${{ matrix.node_version }}
+    - run: yarn install
+    - run: yarn run test-ci

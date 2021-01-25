@@ -7,7 +7,7 @@ export = createLogger;
  */
 declare function createLogger(options?: BunyanAdaptorOptions | undefined): BunyanLite;
 declare namespace createLogger {
-    export { BunyanChildMethod, BunyanLogMethod, BunyanLite, BunyanAdaptorOptions };
+    export { createLogger, BunyanChildMethod, BunyanLogMethod, BunyanLite, BunyanAdaptorOptions };
 }
 type BunyanAdaptorOptions = {
     /**
@@ -60,3 +60,4 @@ type BunyanChildMethod = (data: {
     [extraDataToLog: string]: any;
 }) => BunyanLite;
 type BunyanLogMethod = (...message: any) => void;
+//# sourceMappingURL=index.d.ts.map

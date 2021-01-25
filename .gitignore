@@ -3,3 +3,5 @@
 /package-lock.json
 /.nyc_output
 /coverage
+*.d.ts.map
+/index.mjs

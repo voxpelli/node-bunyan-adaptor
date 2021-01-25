@@ -69,9 +69,10 @@ const internalCreateLogger = function (options, data) {
  * @param {BunyanAdaptorOptions} [options]
  * @returns {BunyanLite}
  */
-const createLogger = (options = {}) => internalCreateLogger({
+const createLogger = (options = {}) => internalCreateLogger({ // linemod-prefix-with: export
   ...options,
   log: options.log || console.log.bind(console)
 });
 
-module.exports = createLogger;
+module.exports = createLogger; // linemod-replace-with: export default createLogger;
+module.exports.createLogger = createLogger; // linemod-remove
