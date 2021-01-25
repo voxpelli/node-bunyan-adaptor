@@ -13,39 +13,39 @@ type BunyanAdaptorOptions = {
     /**
      * Defaults to `console.log()`
      */
-    log?: BunyanLogMethod;
+    log?: BunyanLogMethod | undefined;
     /**
      * Defaults to `options.log`
      */
-    verbose?: BunyanLogMethod;
+    verbose?: BunyanLogMethod | undefined;
     /**
      * Defaults to `options.verbose`, fallbacks to `options.log`
      */
-    trace?: BunyanLogMethod;
+    trace?: BunyanLogMethod | undefined;
     /**
      * Defaults to `options.verbose`, fallbacks to `options.log`
      */
-    debug?: BunyanLogMethod;
+    debug?: BunyanLogMethod | undefined;
     /**
      * Defaults to `options.log`
      */
-    info?: BunyanLogMethod;
+    info?: BunyanLogMethod | undefined;
     /**
      * Defaults to `options.log`
      */
-    warn?: BunyanLogMethod;
+    warn?: BunyanLogMethod | undefined;
     /**
      * Defaults to `options.log`
      */
-    error?: BunyanLogMethod;
+    error?: BunyanLogMethod | undefined;
     /**
      * Defaults to `options.error`, fallbacks to `options.log`
      */
-    fatal?: BunyanLogMethod;
+    fatal?: BunyanLogMethod | undefined;
     /**
      * Defaults to a standard simple child method
      */
-    child?: BunyanChildMethod;
+    child?: BunyanChildMethod | undefined;
 };
 type BunyanLite = {
     fatal: BunyanLogMethod;

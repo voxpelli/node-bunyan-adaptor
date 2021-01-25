@@ -42,7 +42,7 @@ const bindDataWhenExisting = function (func, data) {
 /**
  * Internally used to enable creation of child loggers
  *
- * @param {BunyanAdaptorOptions} options
+ * @param {BunyanAdaptorOptions & { log: BunyanLogMethod }} options
  * @param {Object<string,any>} [data]
  * @returns {BunyanLite}
  */
@@ -69,12 +69,9 @@ const internalCreateLogger = function (options, data) {
  * @param {BunyanAdaptorOptions} [options]
  * @returns {BunyanLite}
  */
-const createLogger = function (options = {}) {
-  options = Object.assign({}, options);
-
-  options.log = options.log || console.log.bind(console);
-
-  return internalCreateLogger(options);
-};
+const createLogger = (options = {}) => internalCreateLogger({
+  ...options,
+  log: options.log || console.log.bind(console)
+});
 
 module.exports = createLogger;
