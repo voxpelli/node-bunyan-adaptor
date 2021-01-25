@@ -1,6 +1,6 @@
 {
   "name": "bunyan-adaptor",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "description": "Maps the major Bunyan logging methods to custom methods",
   "homepage": "http://github.com/voxpelli/node-bunyan-adaptor",
   "repository": {
