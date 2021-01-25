@@ -17,9 +17,9 @@ chai.use(sinonChai);
 
 const should = chai.should();
 
-describe('Bunyan Adaptor', function () {
-  const bunyanAdaptor = require('..');
+const bunyanAdaptor = require('..');
 
+describe('Bunyan Adaptor', function () {
   /** @type {BunyanLogMethod} */
   let stubbedLog;
 
