@@ -58,7 +58,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "run-s full-test"
+      "pre-push": "run-s test"
     }
   },
   "devDependencies": {
