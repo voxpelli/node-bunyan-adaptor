@@ -8,7 +8,7 @@
     "url": "git://github.com/voxpelli/node-bunyan-adaptor"
   },
   "author": "Pelle Wessman <pelle@kodfabrik.se> (http://kodfabrik.se/)",
-  "license": "MIT",
+  "license": "0BSD",
   "keywords": [
     "bunyan",
     "logging",
