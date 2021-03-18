@@ -52,6 +52,7 @@
     "clean:declarations": "rm -rf $(find . -maxdepth 2 -type f -name '*.d.ts')",
     "clean": "run-p clean:*",
     "prepublishOnly": "run-s build",
+    "sync-gh-actions": "ghat",
     "test:mocha": "c8 --reporter=lcov --reporter text mocha 'test/**/*.spec.js'",
     "test-ci": "run-s test:*",
     "test": "run-s check test:*"
@@ -86,6 +87,7 @@
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-unicorn": "^28.0.2",
+    "ghat": "^0.14.0",
     "husky": "^4.0.0",
     "installed-check": "^4.0.0",
     "linemod": "^0.1.1",
