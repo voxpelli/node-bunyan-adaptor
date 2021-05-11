@@ -65,7 +65,7 @@
   "devDependencies": {
     "@scoop/bunyan": "2.0.2",
     "@skypack/package-check": "^0.2.2",
-    "@types/chai": "^4.2.15",
+    "@types/chai": "^4.2.18",
     "@types/mocha": "^8.2.1",
     "@types/node": "^12.20.6",
     "@types/pino": "^6.3.6",
