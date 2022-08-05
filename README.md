@@ -1,5 +1,12 @@
 # Bunyan Adaptor
 
+[![npm version](https://img.shields.io/npm/v/bunyan-adaptor.svg?style=flat)](https://www.npmjs.com/package/bunyan-adaptor)
+[![npm downloads](https://img.shields.io/npm/dm/bunyan-adaptor.svg?style=flat)](https://www.npmjs.com/package/bunyan-adaptor)
+[![Module type: CJS+ESM](https://img.shields.io/badge/module%20type-cjs%2Besm-brightgreen)](https://github.com/voxpelli/badges-cjs-esm)
+[![Types in JS](https://img.shields.io/badge/types_in_js-yes-brightgreen)](https://github.com/voxpelli/types-in-js)
+[![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg)](https://github.com/voxpelli/eslint-config)
+[![Follow @voxpelli](https://img.shields.io/twitter/follow/voxpelli?style=social)](https://twitter.com/voxpelli)
+
 Maps the major [Pino](https://github.com/pinojs/pino) / [Bunyan](https://github.com/trentm/node-bunyan) logging methods to custom methods.
 
 Enables you to make use of detailed logging within your modules while still falling back to `console.log()` if no Pino / Bunyan compatible logger has been provided.
