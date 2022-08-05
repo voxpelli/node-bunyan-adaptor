@@ -1,3 +1,6 @@
+## 6.0.0 (YYYY-MM-DD)
+
+* **BREAKING:** Require at least Node 14.18
 ## 5.0.1 (2021-03-18)
 
 * *Tweak*: Move to the more permissive [Zero-Clause BSD license](https://choosealicense.com/licenses/0bsd/) to get rid of requirement to [include copyright statement](https://twitter.com/felixge/status/1372207750516723715). This is a fully backwards compatible change as it only allows _more_ and is a license recognized as usable by [eg. Google](https://opensource.google/docs/thirdparty/licenses/#unencumbered)

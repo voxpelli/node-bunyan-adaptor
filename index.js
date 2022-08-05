@@ -1,5 +1,3 @@
-// @ts-check
-
 'use strict';
 
 /** @typedef {(data: { [extraDataToLog:string]: any }) => BunyanLite} BunyanChildMethod */
