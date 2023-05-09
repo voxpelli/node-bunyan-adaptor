@@ -87,7 +87,7 @@
     "installed-check": "^6.0.4",
     "linemod": "^0.3.0",
     "mocha": "^10.2.0",
-    "npm-run-all2": "^6.0.1",
+    "npm-run-all2": "^6.0.5",
     "pino": "^8.4.0",
     "sinon": "^14.0.2",
     "sinon-chai": "^3.7.0",
