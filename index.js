@@ -57,7 +57,7 @@ const internalCreateLogger = function (options, data) {
 
     child: options.child || function (extraData) {
       return internalCreateLogger(options, Object.assign({}, data || {}, extraData));
-    }
+    },
   });
 };
 
@@ -69,7 +69,7 @@ const internalCreateLogger = function (options, data) {
  */
 const createLogger = (options = {}) => internalCreateLogger({ // linemod-prefix-with: export
   ...options,
-  log: options.log || console.log.bind(console)
+  log: options.log || console.log.bind(console),
 });
 
 module.exports = createLogger; // linemod-replace-with: export default createLogger;

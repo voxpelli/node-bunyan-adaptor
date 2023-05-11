@@ -64,7 +64,7 @@ describe('Bunyan Adaptor', function () {
       const stubbedCustomLog = sinon.stub();
 
       const logger = bunyanAdaptor({
-        log: stubbedCustomLog
+        log: stubbedCustomLog,
       });
 
       should.exist(logger);
@@ -86,7 +86,7 @@ describe('Bunyan Adaptor', function () {
         log: stubbedCustomLog,
         verbose: stubbedCustomVerboseLog,
         warn: stubbedCustomWarnLog,
-        error: stubbedCustomErrorLog
+        error: stubbedCustomErrorLog,
       });
 
       logger.trace('wow1');
@@ -108,7 +108,7 @@ describe('Bunyan Adaptor', function () {
     it('should have child loggers inherit custom loggers', function () {
       const stubbedCustomLog = sinon.stub();
       const logger = bunyanAdaptor({
-        log: stubbedCustomLog
+        log: stubbedCustomLog,
       });
       const child = logger.child({ key: 'value' });
 
@@ -130,7 +130,7 @@ describe('Bunyan Adaptor', function () {
       const stubbedCustomChild = sinon.stub().returns('yay');
 
       const logger = bunyanAdaptor({
-        child: stubbedCustomChild
+        child: stubbedCustomChild,
       });
       const child = logger.child({ key: 'value' });
 
