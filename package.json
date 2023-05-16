@@ -85,7 +85,7 @@
     "eslint-plugin-unicorn": "^47.0.0",
     "husky": "^8.0.3",
     "installed-check": "^7.0.0",
-    "linemod": "^0.3.0",
+    "linemod": "^1.0.0",
     "mocha": "^10.2.0",
     "npm-run-all2": "^6.0.5",
     "pino": "^8.14.1",
