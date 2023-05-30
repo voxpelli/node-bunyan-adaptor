@@ -11,8 +11,7 @@ type ExpectBunyanLite<T extends BunyanLite> = T;
 import { Logger as PinoLogger } from 'pino';
 export type PinoTest = ExpectBunyanLite<PinoLogger>;
 
-// Fails, but only because maxNodeModuleJsDepth is set in tsconfig.json
-// import bunyan = require('@scoop/bunyan');
-// const bunyanLogger = bunyan.createLogger();
-// export type BunyanTest = ExpectBunyanLite<typeof bunyanLogger>;
+import bunyan from '@scoop/bunyan';
+const bunyanLogger = bunyan.createLogger();
+export type BunyanTest = ExpectBunyanLite<typeof bunyanLogger>;
 
