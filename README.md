@@ -1,4 +1,4 @@
-# Bunyan Adaptor
+# Pino / Bunyan Adaptor
 
 [![npm version](https://img.shields.io/npm/v/bunyan-adaptor.svg?style=flat)](https://www.npmjs.com/package/bunyan-adaptor)
 [![npm downloads](https://img.shields.io/npm/dm/bunyan-adaptor.svg?style=flat)](https://www.npmjs.com/package/bunyan-adaptor)
