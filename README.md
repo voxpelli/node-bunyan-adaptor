@@ -7,19 +7,17 @@
 [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg)](https://github.com/voxpelli/eslint-config)
 [![Follow @voxpelli@mastodon.social](https://img.shields.io/mastodon/follow/109247025527949675?domain=https%3A%2F%2Fmastodon.social&style=social)](https://mastodon.social/@voxpelli)
 
-Maps the major [Pino](https://github.com/pinojs/pino) / [Bunyan](https://github.com/trentm/node-bunyan) logging methods to custom methods.
+Types and mapper for [Pino](https://github.com/pinojs/pino) / [Bunyan](https://github.com/trentm/node-bunyan) logging methods.
 
-Enables you to make use of detailed logging within your modules while still falling back to `console.log()` if no Pino / Bunyan compatible logger has been provided.
+Support Pino / Bunyan compatible loggers with fallback `console.log()`.
 
-Also enables you to map any logging system that's not compatible with Pino / Bunyan to be compatible with them.
-
-## Reusable generic types
+## `BunyanLite` – simplified Pino / Bunyan type subsets
 
 Apart from the actual adapter, this module also ships with some useful generic TypeScript types, where `BunyanLite` is the most usable of them.
 
 The `BunyanLite` type can be used wherever one wants to reference a basic [Pino](https://github.com/pinojs/pino) / [Bunyan](https://github.com/trentm/node-bunyan) subset. That type can then be fulfilled by Pino, Bunyan, a logger created by this module or by another module implementing the same subset.
 
-### All reusable generic types
+### All Pino / Bunyan type subsets
 
 * `BunyanLite` – specifies the lite subset of the Bunyan interface that this module supports
 * `BunyanLogMethod` – specifies the very simple syntax for the individual log methods
@@ -35,7 +33,7 @@ The `BunyanLite` type can be used wherever one wants to reference a basic [Pino]
 * `.trace()`
 * `.child(data)`
 
-## Usage
+## `createLogger()` – map any logger to `BunyanLite` subset
 
 Simple CommonJS example:
 
