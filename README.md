@@ -84,3 +84,8 @@ Maps `options` methods to all seven [Bunyan log levels](https://github.com/trent
 In addition to the above there's also support for:
 
 * `.child(data)` – used to create a child logger. Defaults to built in method, can be overriden using `options.child`
+
+## See also
+
+* [`abstract-logging`](https://www.npmjs.com/package/abstract-logging)
+* 
