@@ -88,4 +88,3 @@ In addition to the above there's also support for:
 ## See also
 
 * [`abstract-logging`](https://www.npmjs.com/package/abstract-logging)
-* 
