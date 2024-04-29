@@ -89,7 +89,7 @@
     "linemod": "^1.1.0",
     "mocha": "^10.2.0",
     "npm-run-all2": "^6.0.6",
-    "pino": "^8.15.0",
+    "pino": "^8.21.0",
     "sinon": "^15.2.0",
     "sinon-chai": "^3.7.0",
     "type-coverage": "^2.26.0",
