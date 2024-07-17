@@ -12,6 +12,6 @@ import { Logger as PinoLogger } from 'pino';
 export type PinoTest = ExpectBunyanLite<PinoLogger>;
 
 import bunyan from '@scoop/bunyan';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const bunyanLogger = bunyan.createLogger();
 export type BunyanTest = ExpectBunyanLite<typeof bunyanLogger>;
-

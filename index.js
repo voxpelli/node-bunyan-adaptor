@@ -69,6 +69,7 @@ const internalCreateLogger = function (options, data) {
  */
 const createLogger = (options = {}) => internalCreateLogger({ // linemod-prefix-with: export
   ...options,
+  // eslint-disable-next-line no-console
   log: options.log || console.log.bind(console),
 });
 
