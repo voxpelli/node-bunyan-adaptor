@@ -76,7 +76,7 @@
     "husky": "^9.1.0",
     "installed-check": "^9.3.0",
     "knip": "^5.26.0",
-    "linemod": "^2.0.0",
+    "linemod": "^2.0.1",
     "mocha": "^10.6.0",
     "npm-run-all2": "^6.2.2",
     "pino": "^9.3.1",
