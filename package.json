@@ -65,7 +65,7 @@
     "@skypack/package-check": "^0.2.2",
     "@types/chai": "^4.3.16",
     "@types/mocha": "^10.0.7",
-    "@types/node": "^18.19.40",
+    "@types/node": "^18.19.68",
     "@types/sinon": "^17.0.3",
     "@types/sinon-chai": "^3.2.12",
     "@voxpelli/eslint-config": "^22.1.0",
@@ -82,8 +82,8 @@
     "pino": "^9.3.1",
     "sinon": "^18.0.0",
     "sinon-chai": "^3.7.0",
-    "type-coverage": "^2.29.1",
-    "typescript": "~5.5.3",
+    "type-coverage": "^2.29.7",
+    "typescript": "~5.7.2",
     "validate-conventional-commit": "^1.0.4"
   }
 }
