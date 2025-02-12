@@ -1,3 +1,5 @@
+/* eslint-disable import-x/first */
+
 // This file will never run, only just be type validated and serve as a test suite for types
 
 import 'node';
