@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/bunyan-adaptor.svg?style=flat)](https://www.npmjs.com/package/bunyan-adaptor)
 [![npm downloads](https://img.shields.io/npm/dm/bunyan-adaptor.svg?style=flat)](https://www.npmjs.com/package/bunyan-adaptor)
-[![Module type: CJS+ESM](https://img.shields.io/badge/module%20type-cjs%2Besm-brightgreen)](https://github.com/voxpelli/badges-cjs-esm)
+[![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://github.com/voxpelli/badges-cjs-esm)
 [![Types in JS](https://img.shields.io/badge/types_in_js-yes-brightgreen)](https://github.com/voxpelli/types-in-js)
 [![neostandard javascript style](https://img.shields.io/badge/code_style-neostandard-7fffff?style=flat&labelColor=ff80ff)](https://github.com/neostandard/neostandard)
 [![Follow @voxpelli@mastodon.social](https://img.shields.io/mastodon/follow/109247025527949675?domain=https%3A%2F%2Fmastodon.social&style=social)](https://mastodon.social/@voxpelli)
@@ -35,18 +35,6 @@ The `BunyanLite` type can be used wherever one wants to reference a basic [Pino]
 
 ## `createLogger()` – map any logger to `BunyanLite` subset
 
-Simple CommonJS example:
-
-```javascript
-const logger = require('bunyan-adaptor')({
-  log: console.log.bind(console),
-  error: console.error.bind(console),
-});
-
-logger.error('Warning');      // Uses console.error()
-logger.info('Informational'); // Uses console.log()
-```
-
 Simple ESM example:
 
 ```javascript
@@ -61,11 +49,18 @@ logger.error('Warning');      // Uses console.error()
 logger.info('Informational'); // Uses console.log()
 ```
 
-Also available as a non-default export:
+Also available as a named export:
 
 ```javascript
-const { createLogger } = require('bunyan-adaptor');
 import { createLogger } from 'bunyan-adaptor';
+```
+
+CommonJS `require()` is also supported via [Node.js ESM require() loading](https://nodejs.org/api/modules.html#loading-ecmascript-modules-using-require):
+
+```javascript
+const createLogger = require('bunyan-adaptor');
+// or
+const { createLogger } = require('bunyan-adaptor');
 ```
 
 ## createLogger(options)
