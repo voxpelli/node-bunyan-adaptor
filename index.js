@@ -1,31 +1,4 @@
-'use strict';
-
-/** @typedef {(data: { [extraDataToLog:string]: any }) => BunyanLite} BunyanChildMethod */
-/** @typedef {(...message: any) => void} BunyanLogMethod */
-
-/**
- * @typedef BunyanLite
- * @property {BunyanLogMethod} fatal
- * @property {BunyanLogMethod} error
- * @property {BunyanLogMethod} warn
- * @property {BunyanLogMethod} info
- * @property {BunyanLogMethod} debug
- * @property {BunyanLogMethod} trace
- * @property {BunyanChildMethod} child
- */
-
-/**
- * @typedef BunyanAdaptorOptions
- * @property {BunyanLogMethod} [log] Defaults to `console.log()`
- * @property {BunyanLogMethod} [verbose] Defaults to `options.log`
- * @property {BunyanLogMethod} [trace] Defaults to `options.verbose`, fallbacks to `options.log`
- * @property {BunyanLogMethod} [debug] Defaults to `options.verbose`, fallbacks to `options.log`
- * @property {BunyanLogMethod} [info] Defaults to `options.log`
- * @property {BunyanLogMethod} [warn] Defaults to `options.log`
- * @property {BunyanLogMethod} [error] Defaults to `options.log`
- * @property {BunyanLogMethod} [fatal] Defaults to `options.error`, fallbacks to `options.log`
- * @property {BunyanChildMethod} [child] Defaults to a standard simple child method
- */
+/** @import { BunyanAdaptorOptions, BunyanLite, BunyanLogMethod } from './reference-types.d.ts' */
 
 /**
  * @template {function} T
@@ -33,9 +6,9 @@
  * @param {Object<string,any>} [data]
  * @returns {T}
  */
-const bindDataWhenExisting = function (func, data) {
+function bindDataWhenExisting (func, data) {
   return data ? func.bind(undefined, data) : func;
-};
+}
 
 /**
  * Internally used to enable creation of child loggers
@@ -44,7 +17,7 @@ const bindDataWhenExisting = function (func, data) {
  * @param {Object<string,any>} [data]
  * @returns {BunyanLite}
  */
-const internalCreateLogger = function (options, data) {
+function internalCreateLogger (options, data) {
   return Object.freeze({
     fatal: bindDataWhenExisting(options.fatal || options.error || options.log, data),
     error: bindDataWhenExisting(options.error || options.log, data),
@@ -59,7 +32,7 @@ const internalCreateLogger = function (options, data) {
       return internalCreateLogger(options, Object.assign({}, data || {}, extraData));
     },
   });
-};
+}
 
 /**
  * Create a new Bunyan adaptor
@@ -67,11 +40,14 @@ const internalCreateLogger = function (options, data) {
  * @param {BunyanAdaptorOptions} [options]
  * @returns {BunyanLite}
  */
-const createLogger = (options = {}) => internalCreateLogger({ // linemod-prefix-with: export
-  ...options,
-  // eslint-disable-next-line no-console
-  log: options.log || console.log.bind(console),
-});
+export function createLogger (options = {}) {
+  return internalCreateLogger({
+    ...options,
+    // eslint-disable-next-line no-console
+    log: options.log || console.log.bind(console),
+  });
+}
 
-module.exports = createLogger; // linemod-replace-with: export default createLogger;
-module.exports.createLogger = createLogger; // linemod-remove
+export default createLogger;
+// require() interop export, see https://nodejs.org/api/modules.html#loading-ecmascript-modules-using-require
+export { createLogger as 'module.exports' };

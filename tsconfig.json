@@ -1,9 +1,11 @@
 {
   "extends": "@voxpelli/tsconfig/node22.json",
   "files": [
-    "index.js"
+    "index.d.ts",
+    "index.js",
+    "reference-types.d.ts"
   ],
   "include": [
-    "test/**/*.js"
+    "test/**/*.cjs"
   ]
 }

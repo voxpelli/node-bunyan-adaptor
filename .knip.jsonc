@@ -2,5 +2,9 @@
   "$schema": "https://unpkg.com/knip@6/schema.json",
   "entry": [
     "test/types.test-d.ts"
-  ]
+  ],
+  "ignoreIssues": {
+    "index.d.ts": ["duplicates"],
+    "index.js": ["duplicates"]
+  }
 }
