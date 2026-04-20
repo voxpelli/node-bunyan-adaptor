@@ -22,41 +22,29 @@
     "typescript": ">=5.9"
   },
   "main": "index.js",
-  "module": "index.mjs",
   "types": "index.d.ts",
+  "type": "module",
   "exports": {
     ".": {
       "types": "./index.d.ts",
-      "import": "./index.mjs",
-      "require": "./index.js"
+      "default": "./index.js"
     }
   },
   "files": [
     "index.js",
-    "index.mjs",
     "index.d.ts",
-    "index.d.ts.map"
+    "reference-types.d.ts"
   ],
   "scripts": {
-    "build:0": "run-s clean",
-    "build:1:declaration": "tsc -p declaration.tsconfig.json",
-    "build:1:commonjs": "linemod -e mjs index.js",
-    "build:1": "run-p build:1:*",
-    "build": "run-s build:*",
-    "check:0": "run-s clean",
-    "check:1:installed-check": "installed-check",
-    "check:1:knip": "knip",
-    "check:1:lint": "eslint",
-    "check:1:tsc": "tsc",
-    "check:1": "run-p check:1:*",
-    "check:2": "run-s build:1:declaration",
-    "check:3": "type-coverage --detail --strict --at-least 99 --ignore-files 'test/*'",
+    "check:installed-check": "installed-check",
+    "check:knip": "knip",
+    "check:lint": "eslint",
+    "check:tsc": "tsc",
+    "check:type-coverage": "type-coverage --detail --strict --at-least 99 --ignore-files 'test/*'",
     "check": "run-s check:*",
-    "clean:declarations": "rm -rf $(find . -maxdepth 2 -type f -name '*.d.ts*')",
-    "clean": "run-p clean:*",
-    "prepare": "husky",
-    "prepublishOnly": "run-s build",
-    "test:mocha": "c8 --reporter=lcov --reporter text mocha 'test/**/*.spec.js'",
+    "husky-enable": "husky",
+    "husky-disable": "git config --unset core.hooksPath",
+    "test:mocha": "c8 --reporter=lcov --reporter text mocha 'test/**/*.spec.cjs'",
     "test-ci": "run-s test:*",
     "test": "run-s check test:*"
   },
@@ -75,7 +63,6 @@
     "husky": "^9.1.7",
     "installed-check": "^10.0.1",
     "knip": "^6.5.0",
-    "linemod": "^2.0.1",
     "mocha": "^11.7.5",
     "npm-run-all2": "^8.0.4",
     "pino": "^10.3.1",
