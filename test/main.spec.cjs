@@ -19,20 +19,20 @@ const should = chai.should();
 
 const bunyanAdaptor = require('..');
 
-describe('Bunyan Adaptor', function () {
+describe('Bunyan Adaptor', () => {
   /** @type {BunyanLogMethod} */
   let stubbedLog;
 
-  beforeEach(function () {
+  beforeEach(() => {
     stubbedLog = sinon.stub(console, 'log');
   });
 
-  afterEach(function () {
+  afterEach(() => {
     sinon.restore();
   });
 
-  describe('main', function () {
-    it('should be created and log correctly', function () {
+  describe('main', () => {
+    it('should be created and log correctly', () => {
       const logger = bunyanAdaptor();
 
       should.exist(logger);
@@ -43,7 +43,7 @@ describe('Bunyan Adaptor', function () {
       stubbedLog.should.have.been.calledOnce.and.calledWith('wow');
     });
 
-    it('should support child loggers', function () {
+    it('should support child loggers', () => {
       const logger = bunyanAdaptor();
       const child = logger.child({ key: 'value' });
 
@@ -60,7 +60,7 @@ describe('Bunyan Adaptor', function () {
         .and.calledWith({ key: 'value' }, 'wow2');
     });
 
-    it('should support custom logger', function () {
+    it('should support custom logger', () => {
       const stubbedCustomLog = sinon.stub();
 
       const logger = bunyanAdaptor({
@@ -76,7 +76,7 @@ describe('Bunyan Adaptor', function () {
       stubbedCustomLog.should.have.been.calledOnce.and.calledWith('wow');
     });
 
-    it('should support detailed custom loggers', function () {
+    it('should support detailed custom loggers', () => {
       const stubbedCustomLog = sinon.stub();
       const stubbedCustomVerboseLog = sinon.stub();
       const stubbedCustomWarnLog = sinon.stub();
@@ -105,7 +105,7 @@ describe('Bunyan Adaptor', function () {
         .and.calledWith('wow5').and.calledWith('wow6');
     });
 
-    it('should have child loggers inherit custom loggers', function () {
+    it('should have child loggers inherit custom loggers', () => {
       const stubbedCustomLog = sinon.stub();
       const logger = bunyanAdaptor({
         log: stubbedCustomLog,
@@ -126,7 +126,7 @@ describe('Bunyan Adaptor', function () {
         .and.calledWith({ key: 'value' }, 'wow2');
     });
 
-    it('should support custom child method', function () {
+    it('should support custom child method', () => {
       const stubbedCustomChild = sinon.stub().returns('yay');
 
       const logger = bunyanAdaptor({

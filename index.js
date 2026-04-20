@@ -29,7 +29,7 @@ function internalCreateLogger (options, data) {
     trace: bindDataWhenExisting(options.trace || options.verbose || options.log, data),
 
     child: options.child || function (extraData) {
-      return internalCreateLogger(options, Object.assign({}, data || {}, extraData));
+      return internalCreateLogger(options, { ...data, ...extraData });
     },
   });
 }
