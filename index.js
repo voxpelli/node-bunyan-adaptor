@@ -47,7 +47,7 @@ const bindDataWhenExisting = function (func, data) {
 const internalCreateLogger = function (options, data) {
   return Object.freeze({
     fatal: bindDataWhenExisting(options.fatal || options.error || options.log, data),
-    error: bindDataWhenExisting(options.error || options.error || options.log, data),
+    error: bindDataWhenExisting(options.error || options.log, data),
 
     warn: bindDataWhenExisting(options.warn || options.log, data),
     info: bindDataWhenExisting(options.info || options.log, data),
