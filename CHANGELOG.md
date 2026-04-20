@@ -1,5 +1,31 @@
 # Changelog
 
+## [8.0.0](https://github.com/voxpelli/node-bunyan-adaptor/compare/v7.0.0...v8.0.0) (2026-04-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* ESM only since require() supports ESM
+* require node.js ^22.13.0 || >=24.0.0
+
+### 🩹 Fixes
+
+* remove no-op duplication in fallback ([14bcea4](https://github.com/voxpelli/node-bunyan-adaptor/commit/14bcea46b1c35d932c48f94cdbbf1da0db9bc808))
+
+
+### 📚 Documentation
+
+* update README ([5788137](https://github.com/voxpelli/node-bunyan-adaptor/commit/57881375f34f786e8e027f16dd9c29d3e71b52b0))
+
+
+### 🧹 Chores
+
+* **deps:** update dependencies ([f0a6bc8](https://github.com/voxpelli/node-bunyan-adaptor/commit/f0a6bc805a8c31b455091235f3513647cbbc4142))
+* ESM only since require() supports ESM ([3580585](https://github.com/voxpelli/node-bunyan-adaptor/commit/358058595cf37147a4ad07296e3f93b2ccbc7896))
+* remove `@skypack/package-check` ([dc416f9](https://github.com/voxpelli/node-bunyan-adaptor/commit/dc416f9374f75b7726487885527656ca9102edb6))
+* require node.js ^22.13.0 || &gt;=24.0.0 ([6d5e7c9](https://github.com/voxpelli/node-bunyan-adaptor/commit/6d5e7c911fee6d9efa654d2bdc56434654578cba))
+* update linting ([a139d1a](https://github.com/voxpelli/node-bunyan-adaptor/commit/a139d1aadc7bf9f28dad727d73bd437dc86364f2))
+
 ## [7.0.0](https://github.com/voxpelli/node-bunyan-adaptor/compare/v6.0.1...v7.0.0) (2025-02-12)
 
 
